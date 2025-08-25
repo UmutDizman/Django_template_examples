@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Page</title>
+</head>
+<body>
+    
+    <h1>Weather Page</h1>
+    <br>
+    <!-- Jinja syntax-->
+    <h2>istanbul :{{istanbul}}</h2>
+    <br>
+    <h3>amsterdam : {{amsterdam}}</h3>
+    <ul> 
+        {% for item in paris  %}
+           <h2> <li> Paris : {{item}} </li></h2>
+        {% endfor %}
+    </ul>
+    <ol>
+        {% for key,value in rome.items %}
+           <h2> <li> Rome : {{key}} : {{value}} </li> </h2>
+        {% endfor %}
+    </ol>
+    
+</body>
+</html>
