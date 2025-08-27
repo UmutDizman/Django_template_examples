@@ -10,7 +10,7 @@ def weather_view(request):
     weather_dictionarry = {
         "istanbul":"30",
         "amsterdam":"50",
-        "paris":[10,20,40],
+        "paris":[10,20,40,50],
         "rome":{"a":30,"b":20,"c":55}
     }
     return render(request,"temlplate_app/weather.html",context=weather_dictionarry)

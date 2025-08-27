@@ -1,10 +1,7 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather Page</title>
-</head>
-<body>
+{% extends "base.html" %}
+
+{% block content %}
+
     
     <h1>Weather Page</h1>
     <br>
@@ -22,6 +19,16 @@
            <h2> <li> Rome : {{key}} : {{value}} </li> </h2>
         {% endfor %}
     </ol>
+        {% if istanbul == "30" %}
+            <h2> istanbul : {{istanbul}}</h2>
+        {% endif %}
     
-</body>
-</html>
+     {% for item in paris  %}
+        {% if item > 40 %}
+            <h2>  Paris : 40 dan büyük {{item}} </h2>
+        {% endif %}
+           
+     {% endfor %}
+    <a href=" {% url 'index' %} "> Go To İndex</a>
+    
+{% endblock %}        
